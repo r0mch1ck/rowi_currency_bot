@@ -1,0 +1,608 @@
+2024-08-29 19:03:44,670 - __main__ - INFO - Bot started polling
+2024-08-29 19:03:44,670 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:03:44,914 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:09:01,153 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:09:01,410 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:09:01,411 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:09:05,696 - __main__ - INFO - Bot started polling
+2024-08-29 19:09:05,696 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:09:06,232 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:09:23,348 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:09:23,609 - aiogram.event - INFO - Update id=807632161 is handled. Duration 250 ms by bot id=7302995339
+2024-08-29 19:10:25,665 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:10:25,921 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:10:25,921 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:10:30,582 - __main__ - INFO - Bot started polling
+2024-08-29 19:10:30,582 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:10:30,756 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:10:30,851 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:10:30,860 - aiogram.event - INFO - Update id=807632162 is not handled. Duration 0 ms by bot id=7302995339
+2024-08-29 19:10:30,860 - aiogram.event - ERROR - Cause exception while process update id=807632162 by bot id=7302995339
+ValidationError: 2 validation errors for SendDocument
+document.is-instance[InputFile]
+  Input should be an instance of InputFile [type=is_instance_of, input_value=<_io.BufferedReader name='bot.log'>, input_type=BufferedReader]
+    For further information visit https://errors.pydantic.dev/2.8/v/is_instance_of
+document.str
+  Input should be a valid string [type=string_type, input_value=<_io.BufferedReader name='bot.log'>, input_type=BufferedReader]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 68, in cmd_log
+    await message.answer_document(file)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\types\message.py", line 1293, in answer_document
+    return SendDocument(
+           ^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for SendDocument
+document.is-instance[InputFile]
+  Input should be an instance of InputFile [type=is_instance_of, input_value=<_io.BufferedReader name='bot.log'>, input_type=BufferedReader]
+    For further information visit https://errors.pydantic.dev/2.8/v/is_instance_of
+document.str
+  Input should be a valid string [type=string_type, input_value=<_io.BufferedReader name='bot.log'>, input_type=BufferedReader]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+2024-08-29 19:11:54,327 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:11:54,582 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:11:54,583 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:11:58,612 - __main__ - INFO - Bot started polling
+2024-08-29 19:11:58,612 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:11:58,989 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:12:20,597 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:12:20,853 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:12:20,856 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:12:25,308 - __main__ - INFO - Bot started polling
+2024-08-29 19:12:25,308 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:12:25,872 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:12:26,202 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:12:26,203 - aiogram.event - INFO - Update id=807632163 is not handled. Duration 0 ms by bot id=7302995339
+2024-08-29 19:12:26,203 - aiogram.event - ERROR - Cause exception while process update id=807632163 by bot id=7302995339
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 67, in cmd_log
+    await message.answer_document(types.InputFile('bot.log'))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+2024-08-29 19:13:00,947 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:13:01,205 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:13:01,206 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:13:05,432 - __main__ - INFO - Bot started polling
+2024-08-29 19:13:05,432 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:13:05,665 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:13:05,736 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:13:07,138 - aiogram.event - INFO - Update id=807632164 is not handled. Duration 1405 ms by bot id=7302995339
+2024-08-29 19:13:07,138 - aiogram.event - ERROR - Cause exception while process update id=807632164 by bot id=7302995339
+TelegramBadRequest: Telegram server says - Bad Request: message is too long
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 67, in cmd_log
+    await message.answer(file.read())
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is too long
+2024-08-29 19:14:41,520 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:14:41,784 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:14:41,784 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:14:46,445 - __main__ - INFO - Bot started polling
+2024-08-29 19:14:46,445 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:14:46,603 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:14:46,989 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:14:47,249 - aiogram.event - INFO - Update id=807632165 is not handled. Duration 250 ms by bot id=7302995339
+2024-08-29 19:14:47,249 - aiogram.event - ERROR - Cause exception while process update id=807632165 by bot id=7302995339
+TelegramBadRequest: Telegram server says - Bad Request: invalid file HTTP URL specified: Wrong port number specified in the URL
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 67, in cmd_log
+    await message.reply_document(file.read())
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: invalid file HTTP URL specified: Wrong port number specified in the URL
+2024-08-29 19:15:17,848 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:15:18,108 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:15:18,109 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:15:22,651 - __main__ - INFO - Bot started polling
+2024-08-29 19:15:22,651 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:15:23,351 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:15:23,618 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:15:24,049 - aiogram.event - INFO - Update id=807632166 is not handled. Duration 421 ms by bot id=7302995339
+2024-08-29 19:15:24,050 - aiogram.event - ERROR - Cause exception while process update id=807632166 by bot id=7302995339
+TelegramBadRequest: Telegram server says - Bad Request: invalid file HTTP URL specified: Wrong port number specified in the URL
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 67, in cmd_log
+    await message.reply_document(file.read())
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: invalid file HTTP URL specified: Wrong port number specified in the URL
+2024-08-29 19:15:41,243 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:15:41,503 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:15:41,504 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:15:45,955 - __main__ - INFO - Bot started polling
+2024-08-29 19:15:45,955 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:15:46,192 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:15:46,301 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:15:46,320 - aiogram.event - INFO - Update id=807632167 is not handled. Duration 15 ms by bot id=7302995339
+2024-08-29 19:15:46,321 - aiogram.event - ERROR - Cause exception while process update id=807632167 by bot id=7302995339
+ValidationError: 2 validation errors for SendDocument
+document.is-instance[InputFile]
+  Input should be an instance of InputFile [type=is_instance_of, input_value=<_io.TextIOWrapper name='...e='r' encoding='cp1251'>, input_type=TextIOWrapper]
+    For further information visit https://errors.pydantic.dev/2.8/v/is_instance_of
+document.str
+  Input should be a valid string [type=string_type, input_value=<_io.TextIOWrapper name='...e='r' encoding='cp1251'>, input_type=TextIOWrapper]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 67, in cmd_log
+    await message.reply_document(file)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\types\message.py", line 1219, in reply_document
+    return SendDocument(
+           ^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for SendDocument
+document.is-instance[InputFile]
+  Input should be an instance of InputFile [type=is_instance_of, input_value=<_io.TextIOWrapper name='...e='r' encoding='cp1251'>, input_type=TextIOWrapper]
+    For further information visit https://errors.pydantic.dev/2.8/v/is_instance_of
+document.str
+  Input should be a valid string [type=string_type, input_value=<_io.TextIOWrapper name='...e='r' encoding='cp1251'>, input_type=TextIOWrapper]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+2024-08-29 19:16:42,539 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:16:42,796 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:16:42,798 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:16:47,012 - __main__ - INFO - Bot started polling
+2024-08-29 19:16:47,012 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:16:47,230 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:16:47,327 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:16:47,345 - aiogram.event - INFO - Update id=807632168 is not handled. Duration 15 ms by bot id=7302995339
+2024-08-29 19:16:47,345 - aiogram.event - ERROR - Cause exception while process update id=807632168 by bot id=7302995339
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 67, in cmd_log
+    await message.reply_document(types.InputFile("bot.log"))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+2024-08-29 19:17:45,258 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:17:45,518 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:17:45,520 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:17:50,220 - __main__ - INFO - Bot started polling
+2024-08-29 19:17:50,220 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:17:50,374 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:17:54,002 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:17:54,263 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:17:54,263 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:17:58,860 - __main__ - INFO - Bot started polling
+2024-08-29 19:17:58,860 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:17:59,383 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:17:59,480 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:17:59,497 - aiogram.event - INFO - Update id=807632169 is not handled. Duration 16 ms by bot id=7302995339
+2024-08-29 19:17:59,497 - aiogram.event - ERROR - Cause exception while process update id=807632169 by bot id=7302995339
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 67, in cmd_log
+    file = types.InputFile("bot.log")  # Передача пути к файлу
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+2024-08-29 19:19:06,866 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:19:07,126 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:19:07,127 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:19:11,412 - __main__ - INFO - Bot started polling
+2024-08-29 19:19:11,412 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:19:11,586 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:19:11,678 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:19:11,694 - aiogram.event - INFO - Update id=807632170 is not handled. Duration 15 ms by bot id=7302995339
+2024-08-29 19:19:11,694 - aiogram.event - ERROR - Cause exception while process update id=807632170 by bot id=7302995339
+AttributeError: 'Message' object has no attribute 'send_document'
+Traceback (most recent call last):
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\manage.py", line 68, in cmd_log
+    await message.send_document(file)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\labs\CurrencyBot\venv\Lib\site-packages\pydantic\main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Message' object has no attribute 'send_document'
+2024-08-29 19:19:18,620 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:19:18,872 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:19:18,873 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:19:23,180 - __main__ - INFO - Bot started polling
+2024-08-29 19:19:23,180 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:19:24,155 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:19:24,255 - __main__ - INFO - User 523258119 requested logs
+2024-08-29 19:19:24,670 - aiogram.event - INFO - Update id=807632171 is handled. Duration 407 ms by bot id=7302995339
+2024-08-29 19:21:24,073 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:21:24,340 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:21:24,340 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:21:28,563 - __main__ - INFO - Bot started polling
+2024-08-29 19:21:28,563 - aiogram.dispatcher - INFO - Start polling
+2024-08-29 19:21:29,126 - aiogram.dispatcher - INFO - Run polling for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
+2024-08-29 19:24:22,644 - __main__ - INFO - User 523258119 issued /start command
+2024-08-29 19:24:23,089 - aiogram.event - INFO - Update id=807632172 is handled. Duration 453 ms by bot id=7302995339
+2024-08-29 19:24:47,729 - __main__ - WARNING - User 523258119 did not provide a currency code
+2024-08-29 19:24:48,535 - aiogram.event - INFO - Update id=807632173 is handled. Duration 812 ms by bot id=7302995339
+2024-08-29 19:25:01,351 - __main__ - INFO - User 523258119 requested currency: USD
+Last update: Thu, 29 Aug 2024
+2024-08-29 19:25:01,449 - aiogram.event - INFO - Update id=807632174 is handled. Duration 562 ms by bot id=7302995339
+2024-08-29 19:31:36,942 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-29 19:31:37,198 - __main__ - INFO - Bot stopped polling
+2024-08-29 19:31:37,200 - aiogram.dispatcher - INFO - Polling stopped for bot @currency_rowi_bot id=7302995339 - 'Currency Bot'
