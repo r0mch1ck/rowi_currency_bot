@@ -14,9 +14,9 @@ def exchange_rate(currency1, currency2='RUB', api_key=None):
         tuple: A tuple containing the exchange rate and the time of the last update in UTC.
                If the request fails, the function will return (None, None).
         """
-    request = requests.get(f'https://v6.exchangerate-api.com/v6/{api_key}/pair/{currency1}/{currency2}')
-    if request.status_code == 200:
-        request = request.json()
-        return request['conversion_rate'], request['time_last_update_utc']
+    response = requests.get(f'https://v6.exchangerate-api.com/v6/{api_key}/pair/{currency1}/{currency2}')
+    if response.status_code == 200:
+        response = response.json()
+        return response['conversion_rate'], response['time_last_update_utc']
     else:
         return None, None
