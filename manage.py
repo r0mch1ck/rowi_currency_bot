@@ -46,7 +46,7 @@ async def cmd_start(message):
     await message.answer("Hello! This bot was created to receive information on world currency rates")
 
 
-@dp.message(Command("currency"))
+@dp.message(Command("rate"))
 async def cmd_currency(message, command):
     """
         This function handles the '/currency' command. It retrieves and sends the exchange rate of a specified currency.
